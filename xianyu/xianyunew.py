@@ -58,24 +58,25 @@ def getPage(url):
 
 if __name__ == '__main__':
     url = "https://s.2.taobao.com/list/list.htm?spm=2007.1000337.6.2.syRomJ&st_edtime=1&q=macbook&ist=0"
-    data=getPrice()
-f = file('macbook.txt','w')    
-f.write(data)
-f.seek(f.tell())
-f.write('\n\r')
+while 1:
+	data=getPrice()
+	f = file('macbook.txt','w')    
+	f.write(data)
+	f.seek(f.tell())
+	f.write('\n\r')
 
-data=getTitle()
-#f.write(data)
-#f.seek(f.tell())
-#print(f.tell())
-f.write('\n\r')
+	data=getTitle()
+	#f.write(data)
+	#f.seek(f.tell())
+	#print(f.tell())
+	f.write('\n\r')
 
-data=getDescription()
-#reload(sys)
-#sys.setdefaultencoding( "utf-8" )
-#f.write(data)
-#f.seek(f.tell())
-f.write('\n\r')
-f.close
+	data=getDescription()
+	#reload(sys)
+	#sys.setdefaultencoding( "utf-8" )
+	#f.write(data)
+	#f.seek(f.tell())
+	f.write('\n\r')
+	f.close
 
 
